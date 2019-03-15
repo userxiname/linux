@@ -611,7 +611,7 @@
 				document.getElementById('iframed1').setAttribute("style", "width:100%; height:100%; border:2; border:none; margin: 0 auto;");
 			}
 			if (setDiv2){
-				document.getElementById('ifdiv2').style.height = '279px';
+				document.getElementById('ifdiv2').style.height = setIframeHeight(document.getElementById('iframed1')) + 'px';
 				document.getElementById('iframed2').setAttribute("style", "width:100%; height:100%; border:2; border:none; margin: 0 auto;");
 			}
 		}
@@ -621,7 +621,7 @@
     		if (iframe) {
         		var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
         		if (iframeWin.document.body) {
-        			height = iframeWin.document.body.scrollHeight;
+        			height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
         			height += 30;
         		}
     		}
