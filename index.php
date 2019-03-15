@@ -2,9 +2,8 @@
 <html>
 <?php
 	$appid = "XinLu-csci571a-PRD-016e557a4-b1f7e7db";
-	// $rooturl = "http://phpapp-hw6.azurewebsites.net";
-	$rooturl = "http://localhost/";
-
+	$rooturl = "http://phpapp-hw6.azurewebsites.net";
+	
 	if (isset($_POST['query'])){
 		$keyword = $_POST['keyword'];
 		$category = $_POST['category'];
